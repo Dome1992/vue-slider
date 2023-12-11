@@ -63,4 +63,18 @@ createApp({
             ],
         };
     },
-});
+    methods: {
+        prevImg() {
+            this.activeImage--;
+            if (this.activeImage < 0) {
+                this.activeImage = this.slides.length - 1;
+            }
+        },
+        nextImg() {
+            this.activeImage++;
+            if (this.activeImage > this.slides.length - 1) {
+                this.activeImage = 0;
+            }
+        }
+    }
+}).mount('#app');

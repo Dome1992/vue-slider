@@ -35,14 +35,19 @@
                     </div>
                 </div>
 
+                <!-- Navigazione -->
                 <div class="thumbs">
-                    <div class="prev"></div>
-                    <div class="next"></div>
+                    <div @click="prevImg" class="prev"></div>
+                    <div @click="nextImg" class="next"></div>
 
                     
                     <div class="thumb active">
-                        <img src="img/01.webp" alt="Svezia" />
+                        <img  v-for="(image, i) in slides.image"
+                        :src="slides.image" :key="i" class="thumbs">
                     </div>
+                       <!-- <img src="img/01.webp" alt="Svezia" />
+                    </div>
+                    
                     <div class="thumb">
                         <img src="img/02.webp" alt="Ratchet & Clank" />
                     </div>
@@ -54,7 +59,7 @@
                     </div>
                     <div class="thumb">
                         <img src="img/05.webp" alt="Avengers" />
-                    </div>
+                    </div>-->
                 </div>
 
             </div>
